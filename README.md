@@ -1,52 +1,24 @@
-# Go Search Extension
+# R Search Extension
 
 <img align="right" width="280" src="R_logo.svg">
 
 ### The ultimate search extension for R
 
-![Chrome Web Store](https://img.shields.io/chrome-web-store/v/epanejkfcekejmmfbcpbcbigfpefbnlb.svg)
-![Mozilla Add-on](https://img.shields.io/amo/v/go-search-extension?color=%2320123A)
-![Microsoft Edge](https://img.shields.io/badge/microsoft--edge-0.2.0-1D4F8C)
-[![license-mit](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/huhu/go-search-extension/blob/master/LICENSE)
 
-[https://go.extension.sh/](https://go.extension.sh/)
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/shixiangwang/r-search-extension">
 
-## Installation
+## Installation（安装）
 
-- [Chrome Web Store](https://chrome.google.com/webstore/detail/golang-search/epanejkfcekejmmfbcpbcbigfpefbnlb)
+- Go to the latest release page and download the `extension.zip`, then install it to Chrome or Edge by hand.
+- 去版本发布页面下载 `extension.zip` 文件，然后手动安装到谷歌或微软 Edge 浏览器。
 
-- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/go-search-extension/)
-
-- [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/ebibclchdmagkhopidkjckjkbhghfehh)
-
-
-## Features
-
-- Search standard library docs
-- Search third party packages on pkg.go.dev
-- Search awesome golang resources
-- Builtin commands (`book`, `conf`, `meetup`, `social`, and `history`)
-
-## How to use it
+## How to use it（使用）
    
-Input keyword **go** in the address bar, press `Space` to activate the search bar. Then enter any word 
-you want to search, the extension will response the related search results instantly.
+Input keyword **r** in the address bar, press `Space` to activate the search bar. Then enter any word you want to search, the extension will response the related search results instantly.
 
-## Contribution
+输入关键字 **r**，然后敲入一个空格，接着输入想要查询的文档或包，浏览器会自动跳转到搜索页面。
 
-```bash
-$ git clone --recursive https://github.com/huhu/go-search-extension
-Cloning into 'go-search-extension'...
-$ cd go-search-extension
 
-$ make chrome # For Chrome version
 
-$ make firefox # For Firefox version
 
-$ make edge # For Edge version
-```
 
-## Get involved
-
-- You can contact us on Discord Channel: https://discord.com/invite/UAzW4A
-- Or by adding the Wechat ID: `huhu_io`, we'll invite you to our Wechat group.
