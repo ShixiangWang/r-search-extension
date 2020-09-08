@@ -7,14 +7,12 @@ local icons() = {
 };
 
 local json = manifest.new(
-  name='Go Search Extension',
-  version='0.2',
-  keyword='go',
-  description='Search Golang std docs and third packages in your address bar instantly!',
+  name='R Search Extension',
+  version='0.1',
+  keyword='r',
+  description='Search R docs and third packages in your address bar instantly!',
 )
              .addIcons(icons())
-             .addBackgroundScripts(utils.js_files('index', ['godocs', 'packages', 'awesome', 'others']))
-             .addBackgroundScripts(utils.js_files('search', ['docs', 'package', 'awesome']))
              .addBackgroundScripts(['command/help.js', 'main.js']);
 
 if std.extVar('browser') == 'firefox' then

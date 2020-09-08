@@ -1,8 +1,8 @@
 # Go Search Extension
 
-<img align="right" width="280" src="gopher.svg">
+<img align="right" width="280" src="R_logo.svg">
 
-### The ultimate search extension for Golang.
+### The ultimate search extension for R
 
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/epanejkfcekejmmfbcpbcbigfpefbnlb.svg)
 ![Mozilla Add-on](https://img.shields.io/amo/v/go-search-extension?color=%2320123A)
