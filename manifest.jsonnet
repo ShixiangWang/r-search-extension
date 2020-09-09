@@ -8,9 +8,9 @@ local icons() = {
 
 local json = manifest.new(
   name='R Search Extension',
-  version='0.1',
+  version='0.2',
   keyword='r',
-  description='Search R docs and third packages in your address bar instantly!',
+  description='Search R docs, packages and questions in your address bar!',
 )
              .addIcons(icons())
              .addBackgroundScripts(['command/help.js', 'main.js']);

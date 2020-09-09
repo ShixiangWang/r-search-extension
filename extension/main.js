@@ -39,6 +39,20 @@ omnibox.addPrefixQueryEvent("!", {
     }
 });
 
+omnibox.addPrefixQueryEvent("?", {
+    defaultSearch: true,
+    searchPriority: 2,
+    onSearch: (query) => {
+        return [{
+            content: `https://stackoverflow.com/search?q=%5Br%5D ${query.substr(1)}`,
+            description: `Search question/answer ${query.substr(1)} on Stack Overflow`,
+        }]
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
+
 // join(["A","bb"]) == "A/bb"
 // join(["A","bb",undefined]) == "A/bb"
 // join(["A",undefined,undefined]) == "A"
