@@ -67,6 +67,20 @@ omnibox.addPrefixQueryEvent("?", {
     }
 });
 
+omnibox.addPrefixQueryEvent("/", {
+    defaultSearch: true,
+    searchPriority: 3,
+    onSearch: (query) => {
+        return [{
+            content: `https://weixin.sogou.com/weixin?type=2&query=${query.substr(1)}`,
+            description: `Search '${query.substr(1)}' related posts on Wechat platform`,
+        }]
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
+
 // join(["A","bb"]) == "A/bb"
 // join(["A","bb",undefined]) == "A/bb"
 // join(["A",undefined,undefined]) == "A"
