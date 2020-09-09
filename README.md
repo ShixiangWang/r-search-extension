@@ -31,7 +31,7 @@ Input keyword **r** in the address bar, press `Space` to activate the search bar
 - `r<space>?keywords` searches r tagged QAs on Stack Overflow.
 - `r<space>?all:keywords` searches all QAs on Stack Overflow.
 - `r<space>/keyword` searches posts on WeChat platform.
-- `r<space>:help` show all available commands.
+- `r<space>:help` shows all available commands.
 
 ### Examples
 
