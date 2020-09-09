@@ -14,6 +14,8 @@
 - Go to the [latest release page](https://github.com/ShixiangWang/r-search-extension/releases) and download the `extension.zip`, then install it to Chrome or Edge by hand.
 - 去版本[发布页面](https://github.com/ShixiangWang/r-search-extension/releases)下载 `extension.zip` 文件，然后手动安装到谷歌或微软 Edge 浏览器。
 
+也可以通过坚果云下载：<https://www.jianguoyun.com/p/Dde3c80Q6uuVCBj4s7oD>
+
 ![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200908234352.png)
 
 ![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200908234455.png)
