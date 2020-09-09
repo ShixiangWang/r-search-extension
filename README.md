@@ -4,10 +4,9 @@
 
 ### The ultimate search extension for R
 
-
-![](https://img.shields.io/github/repo-size/shixiangwang/r-search-extension)
-[![HitCount](http://hits.dwyl.com/ShixiangWang/r-search-extension.svg)](http://hits.dwyl.com/ShixiangWang/r-search-extension)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+![](https://img.shields.io/github/repo-size/shixiangwang/r-search-extension)
+[![Github all releases](https://img.shields.io/github/downloads/ShixiangWang/r-search-extension/total.svg)]
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/ShixiangWang/sync-deploy/master/LICENSE)
 
 ## Installation（安装）
