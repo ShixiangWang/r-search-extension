@@ -17,7 +17,7 @@ omnibox.bootstrap({
     onAppend: (query) => {
         return [{
             content: `https://rdrr.io/search?q=${query}`,
-            description: `Search docs/packages ${c.match(query)} on https://rdrr.io/`,
+            description: `Search docs/packages '${c.match(query)}' on https://rdrr.io/`,
         }]
     },
     afterNavigated: (query, result) => {
@@ -31,7 +31,21 @@ omnibox.addPrefixQueryEvent("!", {
     onSearch: (query) => {
         return [{
             content: `https://rdrr.io/find/?repos=cran%2Cbioc%2Crforge%2Cgithub&fuzzy_slug=${query.substr(1)}`,
-            description: `Search packages ${query.substr(1)} on https://rdrr.io/`,
+            description: `Search package '${query.substr(1)}' on https://rdrr.io/`,
+        }]
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
+
+omnibox.addPrefixQueryEvent("?all:", {
+    defaultSearch: true,
+    searchPriority: 1,
+    onSearch: (query) => {
+        return [{
+            content: `https://stackoverflow.com/search?q=${query.substr(5)}`,
+            description: `Search '${query.substr(5)}' on Stack Overflow all QAs`,
         }]
     },
     afterNavigated: (query, result) => {
@@ -41,11 +55,11 @@ omnibox.addPrefixQueryEvent("!", {
 
 omnibox.addPrefixQueryEvent("?", {
     defaultSearch: true,
-    searchPriority: 2,
+    searchPriority: 3,
     onSearch: (query) => {
         return [{
             content: `https://stackoverflow.com/search?q=%5Br%5D ${query.substr(1)}`,
-            description: `Search question/answer ${query.substr(1)} on Stack Overflow`,
+            description: `Search '${query.substr(1)}' on Stack Overflow r tagged QAs`,
         }]
     },
     afterNavigated: (query, result) => {

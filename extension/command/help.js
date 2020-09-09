@@ -8,6 +8,7 @@ class HelpCommand extends Command {
             `Prefix ${c.match(":")} to execute command (:help, etc)`,
             `Prefix ${c.match("!")} to search packages exclusively`,
             `Prefix ${c.match("?")} to search questions on Stack Overflow with r tag`,
+            `Prefix ${c.match("?all:")} to search questions on Stack Overflow without tag`,
         ];
         return this.wrap(value);
     }
