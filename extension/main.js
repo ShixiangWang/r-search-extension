@@ -4,8 +4,8 @@ const commandManager = new CommandManager(
     new HistoryCommand(),
 );
 
-const defaultSuggestion = `Search R docs and third packages in your address bar instantly!`;
-const omnibox = new Omnibox(defaultSuggestion, c.omniboxPageSize());
+const defaultSuggestion = `Search R docs and packages in your address bar!`;
+const omnibox = new Omnibox(defaultSuggestion, 1000);
 
 omnibox.bootstrap({
     onSearch: (query) => {
