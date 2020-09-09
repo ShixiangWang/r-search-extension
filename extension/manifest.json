@@ -1,0 +1,41 @@
+{
+   "background": {
+      "scripts": [
+         "core/compat.js",
+         "core/omnibox.js",
+         "core/command/base.js",
+         "core/command/simple.js",
+         "core/command/history.js",
+         "core/command/manager.js",
+         "command/help.js",
+         "main.js"
+      ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icon.png",
+         "16": "icon.png",
+         "48": "icon.png"
+      },
+      "default_popup": "popup/index.html",
+      "default_title": "Search R docs, packages and questions in your address bar!"
+   },
+   "content_scripts": [ ],
+   "content_security_policy": "script-src 'self'; object-src 'self';",
+   "description": "Search R docs, packages and questions in your address bar!",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "R Search Extension",
+   "omnibox": {
+      "keyword": "r"
+   },
+   "permissions": [
+      "tabs"
+   ],
+   "version": "1.1",
+   "web_accessible_resources": [ ]
+}

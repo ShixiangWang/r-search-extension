@@ -87,7 +87,7 @@ Omnibox.prototype.bootstrap = function ({onSearch, onFormat, onAppend, beforeNav
             let {content, description} = results.shift();
             // Store the default description temporary.
             defaultDescription = description;
-            description += ` | Page [${page}/${totalPage}], append '${PAGE_TURNER}' to page down`;
+            // description += ` | Page [${page}/${totalPage}], append '${PAGE_TURNER}' to page down`;
             this.setDefaultSuggestion(description, content);
         }
         suggestFn(results);

@@ -46,11 +46,11 @@ omnibox.addPrefixQueryEvent("!", {
     }
 });
 
-omnibox.addPrefixQueryEvent("?all:", {
+omnibox.addPrefixQueryEvent("?all ", {
     defaultSearch: true,
     searchPriority: 1,
     onSearch: (query) => {
-        if (query.substr(0, 5) == "?all:") {
+        if (query.substr(0, 5) == "?all ") {
             return [{
                 content: `https://stackoverflow.com/search?q=${query.substr(5)}`,
                 description: `Search '${query.substr(5)}' on Stack Overflow all QAs`,
@@ -59,6 +59,48 @@ omnibox.addPrefixQueryEvent("?all:", {
             return [{
                 content: `https://stackoverflow.com/search?q=${query}`,
                 description: `Search '${query}' on Stack Overflow all QAs`,
+            }]
+        }
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
+
+omnibox.addPrefixQueryEvent("?bio ", {
+    defaultSearch: true,
+    searchPriority: 1,
+    onSearch: (query) => {
+        if (query.substr(0, 5) == "?bio ") {
+            return [{
+                content: `https://www.biostars.org/local/search/page/?q=${query.substr(5)}`,
+                description: `Search '${query.substr(5)}' on Biostars`,
+            }]
+        } else {
+            return [{
+                content: `https://www.biostars.org/local/search/page/?q=${query}`,
+                description: `Search '${query}' on Biostars`,
+            }]
+        }
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
+
+omnibox.addPrefixQueryEvent("?cmd ", {
+    defaultSearch: true,
+    searchPriority: 1,
+    onSearch: (query) => {
+        if (query.substr(0, 5) == "?cmd ") {
+            return [{
+                content: `https://tldr.ostera.io/${query.substr(5)}`,
+                description: `Search command '${query.substr(5)}' on https://tldr.ostera.io/`,
+            }]
+        } else {
+            return [{
+                content: `https://tldr.ostera.io/${query}`,
+                description: `Search command '${query}' on https://tldr.ostera.io/`,
             }]
         }
     },
@@ -87,6 +129,47 @@ omnibox.addPrefixQueryEvent("?", {
         HistoryCommand.record(query, result);
     }
 });
+omnibox.addPrefixQueryEvent("/zh ", {
+    defaultSearch: true,
+    searchPriority: 1,
+    onSearch: (query) => {
+        if (query.substr(0, 4) == "/zh ") {
+            return [{
+                content: `https://www.zhihu.com/search?type=content&q=${query.substr(4)}`,
+                description: `Search '${query.substr(4)}' on 知乎`,
+            }]
+        } else {
+            return [{
+                content: `https://www.zhihu.com/search?type=content&q=${query}`,
+                description: `Search '${query}' on 知乎`,
+            }]
+        }
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
+
+omnibox.addPrefixQueryEvent("/sf ", {
+    defaultSearch: true,
+    searchPriority: 1,
+    onSearch: (query) => {
+        if (query.substr(0, 4) == "/sf ") {
+            return [{
+                content: `https://segmentfault.com/search?q=${query.substr(4)}`,
+                description: `Search '${query.substr(4)}' on 思否`,
+            }]
+        } else {
+            return [{
+                content: `https://segmentfault.com/search?q=${query}`,
+                description: `Search '${query}' on 思否`,
+            }]
+        }
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
 
 omnibox.addPrefixQueryEvent("/", {
     defaultSearch: true,
@@ -95,12 +178,12 @@ omnibox.addPrefixQueryEvent("/", {
         if (query.substr(0, 1) == "/") {
             return [{
                 content: `https://weixin.sogou.com/weixin?type=2&query=${query.substr(1)}`,
-                description: `Search '${query.substr(1)}' related posts on Wechat platform`,
+                description: `Search '${query.substr(1)}' related posts on 微信公众号`,
             }]
         } else {
             return [{
                 content: `https://weixin.sogou.com/weixin?type=2&query=${query}`,
-                description: `Search '${query}' related posts on Wechat platform`,
+                description: `Search '${query}' related posts on 微信公众号`,
             }]
         }
     },

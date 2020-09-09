@@ -16,7 +16,7 @@ Compat.prototype.browserType = function() {
 };
 
 Compat.prototype.omniboxPageSize = function() {
-    return {"firefox": 6, "edge": 7, "chrome": 8, "unknown": 6}[this.browserType()];
+    return {"firefox": 30, "edge": 30, "chrome": 30, "unknown": 30}[this.browserType()];
 };
 
 // Escape the five predefined entities to display them as text.
