@@ -6,7 +6,7 @@
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 ![](https://img.shields.io/github/repo-size/shixiangwang/r-search-extension)
-[![Github all releases](https://img.shields.io/github/downloads/ShixiangWang/r-search-extension/total.svg)]
+![Github all releases](https://img.shields.io/github/downloads/ShixiangWang/r-search-extension/total.svg)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/ShixiangWang/sync-deploy/master/LICENSE)
 
 ## Installation（安装）
@@ -20,17 +20,32 @@
 
 ## How to use it（使用）
 
-Input keyword **r** in the address bar, press `Space` to activate the search bar. Then enter any word you want to search, the extension will response the related search results instantly. If you search starts with `!`, it will only search package.
+Input keyword **r** in the address bar, press `Space` to activate the search bar. Then enter any word you want to search, the extension will response the related search results instantly. 
 
-输入关键字 **r**，然后敲入一个空格，接着输入想要查询的文档或包，浏览器会自动跳转到搜索页面。如果查询文字以 `!` 开头，那么仅会搜索 R 包。
+输入关键字 **r**，然后敲入一个空格，接着输入想要查询的文档或包，浏览器会自动跳转到搜索页面。
 
-![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200908234613.png)
+#### All commands
+
+- `r<space>keywords` responds to all searches, searching docs/packages is selected at default.
+- `r<space>!keywords` searches only R packages.
+- `r<space>?keywords` searches r tagged QAs on Stack Overflow.
+- `r<space>?all:keywords` searches all QAs on Stack Overflow.
+- `r<space>/keyword` searches posts on WeChat platform.
+- `r<space>:help` show all available commands.
+
+### Examples
+
+![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200909123420.png)
 
 ![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200908234841.png)
 
 ![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200908234652.png)
 
 ![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200908234946.png)
+
+![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200909123528.png)
+
+![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200909123628.png)
 
 
 
