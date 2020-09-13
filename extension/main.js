@@ -129,6 +129,28 @@ omnibox.addPrefixQueryEvent("?", {
         HistoryCommand.record(query, result);
     }
 });
+
+omnibox.addPrefixQueryEvent("/cmd ", {
+    defaultSearch: true,
+    searchPriority: 1,
+    onSearch: (query) => {
+        if (query.substr(0, 5) == "/cmd ") {
+            return [{
+                content: `https://man.linuxde.net/?s=${query.substr(5)}`,
+                description: `Search command '${query.substr(5)}' on Linux命令大全`,
+            }]
+        } else {
+            return [{
+                content: `https://man.linuxde.net/?s=${query}`,
+                description: `Search command '${query}' on Linux命令大全`,
+            }]
+        }
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
+
 omnibox.addPrefixQueryEvent("/zh ", {
     defaultSearch: true,
     searchPriority: 1,

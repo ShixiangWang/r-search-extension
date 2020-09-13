@@ -33,13 +33,16 @@ Input keyword **r** in the address bar, press `Space` to activate the search bar
 - `r<space>?keywords` searches r tagged QAs on Stack Overflow.
 - `r<space>?all<space>keywords` searches all QAs on Stack Overflow.
 - `r<space>?bio<space>keywords` searches all QAs on Biostars.
-- `r<space>?cmd<space>keywords` searches all command (e.g. `echo`) docs on https://tldr.ostera.io/.
+- `r<space>?cmd<space>keywords` searches command (e.g. `echo`) docs on https://tldr.ostera.io/.
 - `r<space>/keywords` searches posts on 微信.
+- `r<space>/cmd<space>keywords` searches linux command on linux 命令大全.
 - `r<space>/zh<space>keywords` searches posts on 知乎.
 - `r<space>/sf<space>keywords` searches posts on 思否.
 - `r<space>:help` shows all available commands.
 
 ### Examples
+
+> Note that Edge can only show 7 search items, to see all available commands, please see help (`r<space>:help`) command.
 
 ![](https://gitee.com/ShixiangWang/ImageCollection/raw/master/png/20200909123420.png)
 
