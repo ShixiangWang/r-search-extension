@@ -47,7 +47,7 @@ omnibox.addPrefixQueryEvent("!", {
 });
 
 omnibox.addPrefixQueryEvent("?all ", {
-    defaultSearch: true,
+    defaultSearch: false,
     searchPriority: 1,
     onSearch: (query) => {
         if (query.substr(0, 5) == "?all ") {
@@ -122,6 +122,27 @@ omnibox.addPrefixQueryEvent("?", {
             return [{
                 content: `https://stackoverflow.com/search?q=%5Br%5D ${query}`,
                 description: `Search '${query}' on Stack Overflow r tagged QAs`,
+            }]
+        }
+    },
+    afterNavigated: (query, result) => {
+        HistoryCommand.record(query, result);
+    }
+});
+
+omnibox.addPrefixQueryEvent("/sh ", {
+    defaultSearch: true,
+    searchPriority: 1,
+    onSearch: (query) => {
+        if (query.substr(0, 4) == "/sh ") {
+            return [{
+                content: `https://sci-hub.se/${query.substr(4)}`,
+                description: `Search URL/PMID/DOI '${query.substr(4)}' on SciHub https://sci-hub.se/`,
+            }]
+        } else {
+            return [{
+                content: `https://sci-hub.se/${query}`,
+                description: `Search URL/PMID/DOI '${query}' on SciHub https://sci-hub.se/`,
             }]
         }
     },

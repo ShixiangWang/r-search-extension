@@ -38,6 +38,7 @@ Input keyword **r** in the address bar, press `Space` to activate the search bar
 - `r<space>/cmd<space>keywords` searches linux command on linux 命令大全.
 - `r<space>/zh<space>keywords` searches posts on 知乎.
 - `r<space>/sf<space>keywords` searches posts on 思否.
+- `r<space>/sh<space>PMID/URL/DOI` searches paper on Sci-Hub using https://sci-hub.se/. If this service is down, please go to <https://tool.yovisun.com/scihub/> see working URLs.
 - `r<space>:help` shows all available commands.
 
 ### Examples
